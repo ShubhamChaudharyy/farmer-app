@@ -7,6 +7,7 @@ var messagebird=require('messagebird')('Jv7vEMVoiYMcE8llCYrsKqtQB')
 const cors=require('cors')
 const CropInfo=require('../model/crops')
 const FarmerInfo=require('../model/farmer')
+const multer=require('multer')
 
 
 var bodyParser=require("body-parser");
@@ -51,7 +52,14 @@ CropInfo.find().then(data=>{
     
 }
 exports.getProblemForm=(req,res,next)=>{
-   
+   const id=req.params.id;
+    FarmerInfo.findById(id).then(farmerdata=>{
+        
+        res.render('mainproblem',{
+            farmerdata
+        })
+    })
+    
 }
 exports.postLogin=(req,res,next)=>{
     const MobileNumber=req.body.phonenumber;

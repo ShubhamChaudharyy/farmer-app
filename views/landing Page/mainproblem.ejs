@@ -8,7 +8,7 @@
     <meta name="description" content="Colorlib Templates">
     <meta name="author" content="Colorlib">
     <meta name="keywords" content="Colorlib Templates">
-
+  <base href="/">
     <!-- Title Page-->
     <title>Au Register Forms by Colorlib</title>
 
@@ -32,10 +32,13 @@
             <div class="card card-2">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Submit Problem</h2>
-                    <form method="POST">
+                    <h2 class="title">Submit Problem <br>Mr <%=farmerdata.FirstName %></h2>
+                    <form method="POST" action="/addproblem">
                         <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="Name" name="name">
+                            <input class="input--style-2" type="hidden" placeholder="Name" name="id" value="<%=farmerdata.id%>">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-2" type="text" placeholder="Name" name="Subject">
                         </div>
                         <div class="row row-space">
                             <div class="col-2">

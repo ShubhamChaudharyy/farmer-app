@@ -6,7 +6,7 @@ const controllers=require('../controller/admin')
 
 router.get('/',controllers.getHomepage)
 router.get('/gethomepage',controllers.getHomepage)
-router.post('/addProblem',controllers.getProblemForm)
+router.get('/addProblem/:id',controllers.getProblemForm)
 router.get('/admin',controllers.getAdminpage)
 router.get('/login',controllers.getLoginpage)
 router.get('/register',controllers.getRegister)
