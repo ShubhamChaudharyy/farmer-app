@@ -33,30 +33,30 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Submit Problem <br>Mr <%=farmerdata.FirstName %></h2>
-                    <form method="POST" action="/addproblem">
-                        <div class="input-group">
+                    <form method="POST" action="/submitproblem" enctype="multipart/form-data">
+                        <!-- <div class="input-group">
                             <input class="input--style-2" type="hidden" placeholder="Name" name="id" value="<%=farmerdata.id%>">
-                        </div>
-                        <div class="input-group">
+                        </div> -->
+                        <!-- <div class="input-group">
                             <input class="input--style-2" type="text" placeholder="Name" name="Subject">
-                        </div>
+                        </div> -->
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <input type="file" name="imageUploader">
+                                        <input type="file" name="image">
                                         <div class="select-dropdown"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-space">
+                        <!--<div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <input class="input--style-2" type="text" placeholder="Enter your problem here" name="problem">
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="p-t-30">
                             <button class="btn btn--radius btn--green" type="submit">Submit</button>
                         </div>

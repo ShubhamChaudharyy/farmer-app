@@ -9,6 +9,23 @@ const CropInfo=require('../model/crops')
 const FarmerInfo=require('../model/farmer')
 const multer=require('multer')
 
+const storage=multer.diskStorage(
+    {
+        destination:function(req,file,cb)
+        {
+            cb(null,'./uploads/')
+        },
+        filename:function(req,file,cb)
+        {
+            cb(null,new Date().toISOString() +file.originalname)
+        }
+
+
+    }
+)
+const upload=multer({storage:storage})
+
+
 
 var bodyParser=require("body-parser");
 app.use(bodyParser.urlencoded({extended:true}));
@@ -128,5 +145,5 @@ exports.getCrops=(req,res,next)=>{
   
 }
 exports.postProblem=(req,res,next)=>{
-
+ console.log(req.file.filename)
 }
