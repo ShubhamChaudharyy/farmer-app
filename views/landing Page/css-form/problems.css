@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-heading{
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.para-style{
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.main-image{
+    padding: 30px;
+}
+
+.absolute-set{
+    position: absolute;
+    top: 20px; 
+}
+
+.button-set{
+    position: absolute;
+    top: 20px;
+    display: inline-block;
+}

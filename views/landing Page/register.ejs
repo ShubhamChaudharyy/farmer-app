@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Login V9</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<base href="/">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images-login/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor-login/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts-login/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts-login/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor-login/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor-login/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor-login/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor-login/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor-login/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css-login/util.css">
+	<link rel="stylesheet" type="text/css" href="css-login/main.css">
+<!--===============================================================================================-->
+</head>
+<body  >
+	
+	
+	<div class="container-login100" style="background-image: url('images-login/bg-01.jpg');">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form class="login100-form validate-form"style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" method="POST" action="/postRegister">
+				<span class="login100-form-title p-b-37" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif" >
+Register Yourself
+				</span>
+			
+      
+				
+                <% 
+      if(err)
+      {%>
+          <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Cannot Verify Phone Number</p>
+      <%}
+      
+         
+      %>
+      
+                <input type="hidden" name="id" value="<%= id %>"></input>
+               
+                <div class="wrap-input100 validate-input m-b-20" data-validate="Enter Name">
+					<input class="input100 form-control" type="tel" name="Name" placeholder="FirstName"style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter Address">
+					<input class="input100 form-control" type="tel" name="Address" placeholder="Address"style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter Name">
+					<input type="text" name="number"></input>
+					<span class="focus-input100"></span>
+				</div>
+                <select name="cityname" style="margin-top: 5px;">
+                <% 
+             for(i in data)
+              {%>
+               
+                    
+                    <option value="<%=data[i].city%>"><%= data[i].city%></option>
+                    
+               
+              <%}
+            %>
+                </select>
+                <div class="wrap-input100 validate-input m-b-20" data-validate="Enter OTP">
+                    <input class="input100 form-control" type="tel" name="Otp" placeholder="Enter the One Time Password"style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                    <span class="focus-input100"></span>
+                </div>
+               
+				
+
+				<div class="container-login100-form-btn" style="margin-top: 15px;">
+					<button class="login100-form-btn" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+						Sign In
+					</button>
+				</div>
+
+				<div class="text-center p-t-57 p-b-20" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+					<span class="txt1" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+						Or login with
+					</span>
+				</div>
+
+				<div class="flex-c p-b-112">
+					<a href="#" class="login100-social-item">
+						<i class="fa fa-facebook-f"></i>
+					</a>
+
+					<a href="#" class="login100-social-item">
+						<img src="images-login/icons/icon-google.png" alt="GOOGLE">
+					</a>
+				</div>
+
+				<div class="text-center">
+					<a href="#" class="txt2 hov1" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+						Sign Up
+					</a>
+				</div>
+			</form>
+
+			
+		</div>
+	</div>
+	
+	
+
+	
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+		}
+		</script>
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		
+<!--===============================================================================================-->
+	<script src="vendor-login/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor-login/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor-login/bootstrap/js/popper.js"></script>
+	<script src="vendor-login/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor-login/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor-login/daterangepicker/moment.min.js"></script>
+	<script src="vendor-login/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor-login/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js-login/main.js"></script>
+
+</body>
+</html>
